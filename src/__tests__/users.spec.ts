@@ -1,7 +1,7 @@
-const request = require('supertest');
-const { validate } = require('uuid');
+import request from 'supertest';
+import { validate, v4 } from 'uuid';
 
-const { app } = require('../');
+import { app } from '../shared/infra/http';
 
 describe('Users', () => {
   it('should be able to create a new user', async () => {
